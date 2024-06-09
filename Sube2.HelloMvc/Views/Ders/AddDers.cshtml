@@ -1,0 +1,94 @@
+﻿@model Ders
+@{
+    ViewData["Title"] = "AddDers";
+}
+<style>
+    
+.card {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+ 
+    .custom-heading {
+        font-size: 28px;
+    }
+
+
+.custom-input {
+    font-size: 20px;
+    padding: 15px;
+}
+
+
+.custom-label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+</style>
+
+<div class="container d-flex justify-content-center my-5">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title text-center custom-heading">Ders Ekleme İşlemi</h2>
+            <form asp-action="AddDers" asp-controller="Ders" method="post">
+                <div class="form-group">
+                    <label for="DersKodu" class="custom-label">Ders Kodu</label>
+                    <input asp-for="DersKodu" class="form-control custom-input" id="DersKodu" />
+                </div>
+
+                <div class="form-group">
+                    <label for="DersAd" class="custom-label">Ders Adı</label>
+                    <input asp-for="DersAd" class="form-control custom-input" id="DersAd" />
+                </div>
+
+                <div class="form-group">
+                    <label for="Kredi" class="custom-label">Kredi</label>
+                    <input asp-for="Kredi" class="form-control custom-input" id="Kredi" />
+                </div>
+
+                <div class="form-group text-center mt-4">
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
